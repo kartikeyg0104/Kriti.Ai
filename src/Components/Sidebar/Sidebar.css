@@ -1,0 +1,144 @@
+.sidebar{
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+}
+
+.sidebar img{
+    width: 20px;
+}
+
+.sidebar .menu{
+    display: block;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.sidebar .new-chat{
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: #e6eaf1;
+    border-radius: 50px;
+    font-size: 14px;
+    color: grey;
+    cursor: pointer;
+}
+
+.sidebar .recent{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .recent-title{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.sidebar .recent-entry{
+    display: flex;
+    align-items: start;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color: #282828;
+    cursor: pointer;
+}
+
+.sidebar .recent-entry:hover{
+    background-color: #e2e6eb;
+}
+
+.sidebar .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .bottom-item{
+    padding-right: 10px;
+    cursor: pointer;
+
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-sidebar {
+    display: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 26px;
+    border-radius: 50%;
+    background-color: #e6eaf1;
+    color: #4b4b4b;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        width: 250px; 
+        max-width: 75%; 
+        box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+        padding: 15px 12px; 
+        overflow-y: auto;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .sidebar img {
+        width: 18px; 
+    }
+    
+    .sidebar .new-chat {
+        margin-top: 20px; 
+        padding: 8px 12px; 
+        font-size: 13px; 
+    }
+    
+    .sidebar .recent-entry {
+        padding: 8px;
+        padding-right: 20px; 
+    }
+    
+    .sidebar .recent-title {
+        margin-top: 20px; 
+        margin-bottom: 15px;
+        font-size: 14px; 
+    }
+    
+    .sidebar .bottom {
+        margin-bottom: 30px; 
+        margin-top: 15px;
+    }
+    
+    .sidebar .bottom-item {
+        padding: 6px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 220px; 
+        max-width: 70%;
+        padding: 12px 10px;
+    }
+    
+    .sidebar .new-chat {
+        margin-top: 15px;
+    }
+}
